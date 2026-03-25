@@ -9,7 +9,7 @@ const TIERS = [
     accent: "#40916C",
     light: "#D8F3DC",
     description: "Surface-level updates to maintain tenant appeal and prevent rent erosion. Ideal for units between tenants.",
-    rentImpactPerCat: { kitchen: 30, bathroom: 25, flooring: 20, paint: 15, fixtures: 10, appliances: 10, exterior: 15, hvac: 5 },
+    rentImpactPerCat: { kitchen: 30, bathroom: 25, flooring: 20, paint: 15, fixtures: 10, appliances: 10, exterior: 15, hvac: 5, doors: 12, yardwork: 10 },
     timelineWeeks: [1, 2],
   },
   {
@@ -20,7 +20,7 @@ const TIERS = [
     accent: "#5FA8D3",
     light: "#CAE9FF",
     description: "Meaningful improvements that modernize the unit and justify a rent increase. Best ROI tier for most Seattle markets.",
-    rentImpactPerCat: { kitchen: 75, bathroom: 60, flooring: 45, paint: 30, fixtures: 25, appliances: 40, exterior: 35, hvac: 20 },
+    rentImpactPerCat: { kitchen: 75, bathroom: 60, flooring: 45, paint: 30, fixtures: 25, appliances: 40, exterior: 35, hvac: 20, doors: 30, yardwork: 25 },
     timelineWeeks: [3, 5],
   },
   {
@@ -31,7 +31,7 @@ const TIERS = [
     accent: "#C9556B",
     light: "#FADADD",
     description: "Gut-level renovation to reposition the property into a higher rent class. Best for distressed acquisitions in Seattle.",
-    rentImpactPerCat: { kitchen: 120, bathroom: 100, flooring: 70, paint: 45, fixtures: 40, appliances: 65, exterior: 60, hvac: 50 },
+    rentImpactPerCat: { kitchen: 120, bathroom: 100, flooring: 70, paint: 45, fixtures: 40, appliances: 65, exterior: 60, hvac: 50, doors: 45, yardwork: 40 },
     timelineWeeks: [6, 12],
   },
 ];
@@ -331,6 +331,86 @@ const CATEGORIES = [
           "Complete duct replacement",
           "Whole-house insulation upgrade",
           "Electrical panel upgrade (if needed)",
+        ],
+      },
+    },
+  },
+  {
+    id: "doors",
+    icon: "🚪",
+    name: "Doors & Millwork",
+    tiers: {
+      budget: {
+        cost: [400, 1000],
+        scope: [
+          "Tighten hinges & adjust sticking doors",
+          "Replace missing or damaged door stops",
+          "Fill & sand door dings, touch-up paint",
+          "Replace hollow-core doors with worst damage",
+          "Clean & re-stain or paint existing trim",
+        ],
+      },
+      mid: {
+        cost: [1800, 4000],
+        scope: [
+          "Replace all interior hollow-core doors (flat panel or 2-panel)",
+          "New door casings & trim throughout",
+          "Install new closet bifold or sliding doors",
+          "Add door sweeps & weatherstripping (exterior doors)",
+          "New window sills & aprons where needed",
+          "Paint or stain all new millwork",
+        ],
+      },
+      premium: {
+        cost: [4500, 9000],
+        scope: [
+          "Solid-core interior doors throughout (shaker or craftsman style)",
+          "New entry door with sidelite or transom",
+          "Custom closet organizer systems",
+          "Crown molding in living areas & bedrooms",
+          "Wainscoting or chair rail in dining/entry",
+          "New window casing & header trim package",
+          "Pocket door or barn door feature (1–2 locations)",
+        ],
+      },
+    },
+  },
+  {
+    id: "yardwork",
+    icon: "🌿",
+    name: "Yardwork",
+    tiers: {
+      budget: {
+        cost: [300, 900],
+        scope: [
+          "Mow, edge, and clean up lawn",
+          "Remove weeds from beds and cracks",
+          "Trim overgrown shrubs and hedges",
+          "Rake and haul away debris",
+          "Spread bark/mulch in existing beds",
+        ],
+      },
+      mid: {
+        cost: [900, 3500],
+        scope: [
+          "Full lawn aeration and overseeding",
+          "Install or refresh bark/mulch beds",
+          "Plant low-maintenance shrubs and ground cover",
+          "Install basic drip irrigation for beds",
+          "Repair or replace damaged fence sections",
+          "Power wash walkways and driveway",
+        ],
+      },
+      premium: {
+        cost: [3500, 10000],
+        scope: [
+          "Full landscape redesign with new sod or turf",
+          "Automated sprinkler/drip irrigation system",
+          "New planting design with trees, shrubs, and perennials",
+          "Decorative rock, pavers, or retaining walls",
+          "Outdoor lighting along pathways and beds",
+          "New fencing or privacy screening",
+          "Patio or deck area improvements",
         ],
       },
     },
